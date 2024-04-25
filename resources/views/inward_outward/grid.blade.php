@@ -143,7 +143,7 @@
 
                                             @endforeach
                                             <tr>
-                                                <td colspan="3">
+                                                <td colspan="4">
                                                     <th>Current Balance : Rs {{ $total_current_balance }}</th>
                                                 </td>
                                             </tr>

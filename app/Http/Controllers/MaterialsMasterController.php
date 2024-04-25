@@ -57,13 +57,12 @@ class MaterialsMasterController extends Controller
         $data->save();
 
 
-        $sub = 'MAT-000'.$data->id;
+        $sub = 'MAT'.sprintf('%06d', $data->id);
         $update = [
             'unique_id' => $sub ,
         ];
 
-        Meterial::where('id', $request->data)->update($update);
-
+        Meterial::where('id', $data->id)->update($update);
 
         return redirect('/materials_master')->with('message','Your Meterial Added Successfully.');
     }

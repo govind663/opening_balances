@@ -48,9 +48,6 @@ class CategoryMasterController extends Controller
         $data->others = $request->get('others');
         $data->inserted_dt = date("Y-m-d H:i:s");
 
-        // === generated Unique and auto incrementing id with six digit ===
-        $data->material_id = 'MAT'.sprintf('%06d', $data->id);
-
         $data->save();
 
         return redirect('/category_master')->with('message','Your Category Added Successfully.');

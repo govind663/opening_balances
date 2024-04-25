@@ -66,12 +66,12 @@ class INwardOutwardMasterController extends Controller
         $data->save();
 
 
-        $sub = 'MAT_IN/OUT-000'.$data->id;
+        $sub = 'MAT-INV'.sprintf('%06d', $data->id);
         $update = [
             'unique_id' => $sub ,
         ];
 
-        InwardOutwardQuantity::where('id', $request->data)->update($update);
+        InwardOutwardQuantity::where('id', $data->id)->update($update);
 
 
         return redirect('/inward_outward_quantity_master')->with('message','Your Inward/Outward Quantity Added Successfully.');
