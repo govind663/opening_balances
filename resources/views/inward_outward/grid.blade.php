@@ -98,6 +98,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Sr. No</th>
+                                                <th>Inward Id</th>
                                                 <th>Meterial Category</th>
                                                 <th>Meterial Name</th>
                                                 <th>Opening Balance</th>
@@ -117,6 +118,7 @@
 
                                             <tr>
                                                 <td>{{ $key+1 }}</td>
+                                                <td>{{ $value->unique_id }}</td>
                                                 <td>{{ $value->raw_material}}</td>
                                                 <td>{{ $value->material_name }}</td>
                                                 <th>Rs {{ $value->opening_balance }}</th>

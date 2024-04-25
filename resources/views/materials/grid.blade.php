@@ -98,6 +98,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Sr. No</th>
+                                                <th>Material Id</th>
                                                 <th>Category</th>
                                                 <th>Meterial Name</th>
                                                 <th>Opening Balance</th>
@@ -110,6 +111,7 @@
                                             @foreach ($Meterial as $key => $value )
                                             <tr>
                                                 <td>{{ $key+1 }}</td>
+                                                <td>{{ $value->unique_id }}</td>
                                                 <td>{{ $value->raw_material}}</td>
                                                 <td>{{ $value->material_name }}</td>
                                                 <td>{{ $value->opening_balance }}</td>
